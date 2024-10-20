@@ -11,7 +11,7 @@ library(shiny)
   
   ```{r}
 #our data set
-housing = read_csv("C:/Users/wjcra/Downloads/LondonHousing/London_houses.csv") %>% filter(house_type %in% c("House", "Flat / Apartment", "New development", "Penthouse")) %>% drop_na()
+housing = read_csv("https://github.com/willcraw/HW2/London_houses.csv") %>% filter(house_type %in% c("House", "Flat / Apartment", "New development", "Penthouse")) %>% drop_na()
 
 ```
 
