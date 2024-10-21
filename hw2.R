@@ -1,21 +1,16 @@
-
-```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warnings = FALSE)
 library(tidyr)
 library(dplyr)
 library(tidyverse)
 library(shiny)
-```
+
 # London Housing
 *In this project, we will be comparing housing prices among boroughs in London. This data set includes price, house type, square feet, borough, city, number of beds and bath. We will be filtering out all rows with house_type equal to bungalow, studio, mews, and duplex because of a lack of data.*
   
-  ```{r}
+
 #our data set
 housing = read_csv("https://github.com/willcraw/HW2/London_houses.csv") %>% filter(house_type %in% c("House", "Flat / Apartment", "New development", "Penthouse")) %>% drop_na()
 
-```
-
-```{r}
 #shiny app
 reset_selection <- function(x, brush) {
   brushedPoints(x, brush, allRows=TRUE)$selected_
@@ -50,7 +45,7 @@ server = function(input, output) {
 }
 
 shinyApp(ui, server)
-```
+
 
 
 
