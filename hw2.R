@@ -9,7 +9,7 @@ library(shiny)
   
 
 #our data set
-housing = read_csv("https://github.com/willcraw/HW2/London_houses.csv") %>% filter(house_type %in% c("House", "Flat / Apartment", "New development", "Penthouse")) %>% drop_na()
+housing = read_csv("https://raw.githubusercontent.com/willcraw/HW2/refs/heads/main/London_houses.csv") %>% filter(house_type %in% c("House", "Flat / Apartment", "New development", "Penthouse")) %>% drop_na()
 
 #shiny app
 reset_selection <- function(x, brush) {
