@@ -4,9 +4,7 @@ library(dplyr)
 library(tidyverse)
 library(shiny)
 
-# London Housing
-*In this project, we will be comparing housing prices among boroughs in London. This data set includes price, house type, square feet, borough, city, number of beds and bath. We will be filtering out all rows with house_type equal to bungalow, studio, mews, and duplex because of a lack of data.*
-  
+# London Housing  
 
 #our data set
 housing = read_csv("https://raw.githubusercontent.com/willcraw/HW2/refs/heads/main/London_houses.csv") %>% filter(house_type %in% c("House", "Flat / Apartment", "New development", "Penthouse")) %>% drop_na()
